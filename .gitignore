@@ -1,6 +1,3 @@
-# Build outputs (if using a build tool like Vite, Webpack, etc.)
-dist/
-build/
 
 # OS-specific files
 .DS_Store
@@ -12,9 +9,3 @@ Thumbs.db
 
 # Log files
 *.log
-
-# Docker artifacts
-*.local
-
-# Node modules (if any, in case you add build tooling later)
-node_modules/

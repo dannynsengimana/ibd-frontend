@@ -1,0 +1,36 @@
+name: Frontend CI with Validation
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate-frontend:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install validation tools
+        run: |
+          npm install -g htmlhint csslint eslint
+
+      - name: Run HTMLHint
+        run: |
+          htmlhint "**/*.html"
+
+      - name: Run CSSLint
+        run: |
+          csslint "**/*.css" || echo "CSSLint issues found"
+
+      - name: Run ESLint
+        run: |
+          eslint "**/*.js" || echo "ESLint issues found"

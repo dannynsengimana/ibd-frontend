@@ -55,4 +55,4 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          tags: ibd-frontend:latest
+          tags: dannynsengimana97/ibd-frontend:latest

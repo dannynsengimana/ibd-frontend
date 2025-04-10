@@ -1,4 +1,4 @@
-name: Frontend CI with Validation and Docker Build
+name: Frontend CI with Validation and Docker Build #pull
 
 on:
   push:

@@ -54,8 +54,8 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t ibd-frontend:tag -f Dockerfile .
+          docker build -t ibd-frontend -f Dockerfile .
 
       - name: Push Docker image
         run: |
-          docker push dannynsengimana97/ibd-frontend:tag
+          docker push dannynsengimana97/ibd-frontent
